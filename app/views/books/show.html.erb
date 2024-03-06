@@ -1,0 +1,3 @@
+<h1><%= @book.title %></h1>
+<h3><%= @book.author %></h3>
+<%= button_to "Add to Library", book_readings_path(@book), method: :post %>

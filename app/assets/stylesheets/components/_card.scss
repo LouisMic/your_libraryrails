@@ -1,0 +1,11 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.card img {
+  height: 40vh;
+  width: fit-content;
+  align-self: center;
+}

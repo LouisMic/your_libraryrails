@@ -1,0 +1,6 @@
+<% @playlists.each do |playlist| %>
+  <h1><%= playlist.title %></h1>
+  <% playlist.books.each do |book| %>
+    <%= book.title %> - <%= link_to "Delete", playlist_playlist_item_path(playlist, book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <% end %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1><%= @reading.book.title %></h1>
+<h3><%= @reading.book.author %></h3>
+<%= simple_form_for [@reading, @playlist_item] do |f| %>
+  <%= f.select :playlist_id, options_for_select(@playlists.collect { | playlist | [playlist.title, playlist.id] }, @playlist_item.playlist_id) %>
+  <%= f.button :submit %>
+<% end %>
